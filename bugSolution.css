@@ -1,0 +1,14 @@
+The solution is to modify the CSS selector to be more specific, targeting only the intended element for the pseudo-element.  Here's how you can fix it:
+
+```css
+.container .specific-element:before {
+  content: "Example";
+  display: block;
+}
+
+.element {
+  background-color: lightblue;
+}
+```
+
+By adding `.specific-element` to the selector, we ensure that the `:before` pseudo-element only applies to the intended target. This helps to avoid conflicts with other elements using pseudo-elements within the same `.container`.
