@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates an issue where the selector for the `:before` pseudo-element is too broad, unintentionally affecting elements other than the intended target. 
+
+```css
+.container:before {
+  content: "Example";
+  display: block;
+}
+
+.element {
+  background-color: lightblue;
+}
+
+```
+
+The `:before` pseudo-element is applied to all elements within the `.container` class. In certain situations, this could lead to unexpected behavior when another element within the same container also uses the `:before` pseudo-element. This may result in cascading issues due to the specificity of selectors.
